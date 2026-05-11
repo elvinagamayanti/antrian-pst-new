@@ -1,0 +1,34 @@
+{
+  "properties": [
+    {
+      "name": "app.jwt.secret",
+      "type": "java.lang.String",
+      "description": "JWT secret key."
+    },
+    {
+      "name": "app.jwt.expiration-ms",
+      "type": "java.lang.Integer",
+      "description": "JWT expiration time in milliseconds."
+    },
+    {
+      "name": "app.antrian.reset-time",
+      "type": "java.lang.String",
+      "description": "Time to reset antrian."
+    },
+    {
+      "name": "app.antrian.prefix.pengaduan",
+      "type": "java.lang.String",
+      "description": "Prefix for pengaduan."
+    },
+    {
+      "name": "antrian.prefix.konsultasi",
+      "type": "java.lang.String",
+      "description": "Prefix for konsultasi."
+    },
+    {
+      "name": "app.cors.allowed-origins",
+      "type": "java.lang.String",
+      "description": "Allowed origins for CORS."
+    }
+  ]
+}
