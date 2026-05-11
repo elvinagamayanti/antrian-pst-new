@@ -77,7 +77,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         // Public endpoints - landing page & ambil antrian
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/display/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/antrian/ambil").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/antrian/cek/**").permitAll()

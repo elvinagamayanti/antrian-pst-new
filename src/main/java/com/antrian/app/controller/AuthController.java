@@ -27,4 +27,12 @@ public class AuthController {
         LoginResponse response = authService.login(request);
         return ResponseEntity.ok(ApiResponse.success("Login berhasil", response));
     }
+
+    @PostMapping("/logout")
+    @Operation(summary = "Logout admin/operator", description = "Logout pengguna dari sistem. Membutuhkan Bearer token.")
+    public ResponseEntity<ApiResponse<Void>> logout(org.springframework.security.core.Authentication authentication) {
+        String username = authentication != null ? authentication.getName() : "Unknown";
+        org.springframework.security.core.context.SecurityContextHolder.clearContext();
+        return ResponseEntity.ok(ApiResponse.success("Logout berhasil untuk user: " + username, null));
+    }
 }
